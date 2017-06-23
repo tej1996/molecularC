@@ -2,8 +2,9 @@
 
 import os,sys,socket,time
 
-w_msg='''
+os.system('tput clear')
 
+w_msg='''
 !! Welcome to Molecular Cloud Platform !! 
   -------------------------------------
 *Services Provided:
@@ -21,4 +22,5 @@ for i in range(3):
     sys.stdout.flush()
 
 print ""
+os.system('tput clear')
 execfile('client/login-client.py')

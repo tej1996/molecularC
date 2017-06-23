@@ -1,10 +1,14 @@
 #!/usr/bin/python
 
-import os,sys,socket,time
+import os,sys,socket,time,subprocess
 
 sock= socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 SERVER_IP="192.168.122.152"
 SERVER_PORT=8000
+
+#client username and password
+username=sys.argv[1]
+password=sys.argv[2]
 
 options='''
 
@@ -27,16 +31,16 @@ print options
 opt=raw_input()
 
 if opt=="1":
-	execfile('client/firefox.py')
+	execfile('client/saas/firefox.py')
 elif opt=="2":
-	execfile('vlc.py')
+	execfile('client/saas/vlc.py')
 elif opt=="3":
-	execfile('calculator.py')
+	execfile('client/saas/calculator.py')
 elif opt=="4":
-	execfile('openoffice.py')
+	execfile('client/saas/openoffice.py')
 elif opt=="5":
-	execfile('sreenshot.py')
+	execfile('client/saas/screenshot.py')
 elif opt=="6":
-	execfile('webcam.py')
+	execfile('client/saas/webcam.py')
 else:
 	print "Incorrect Input!"
